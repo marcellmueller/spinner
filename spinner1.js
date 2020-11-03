@@ -6,9 +6,7 @@ let timeout = () => {
   setTimeout(function () {
     console.log(spinner[i]);
     i++;
-    if (i < spinner.length) {
-      timeout();
-    }
+    i < spinner.length ? timeout() : null;
   }, 100);
 };
 
