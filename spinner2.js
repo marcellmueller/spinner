@@ -4,9 +4,9 @@ let i = 0;
 
 let timeout = () => {
   setTimeout(function () {
-    console.log(spinner[i]);
+    process.stdout.write(spinner[i]);
     i++;
-    if (i < spinner.length) {
+    if (i < spinner.length + 100) {
       timeout();
     }
   }, 100);
